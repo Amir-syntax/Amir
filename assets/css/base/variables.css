@@ -1,0 +1,21 @@
+:root {
+  --color-bg: #f7f7fb;
+  --color-surface: #ffffff;
+  --color-border: rgb(97, 114, 124);
+  --color-org: rgb(51, 143, 219);
+  --color-text: #171923;
+  --color-muted: #626b7a;
+  --color-primary: #1f7a6d;
+  --color-primary-dark: #155e54;
+  --color-border: #e1e5ec;
+  --font-main: "IranSansX", Tahoma, Arial, sans-serif;
+  --container-width: 1120px;
+  --radius-sm: 6px;
+  --shadow-soft: 0 16px 40px rgba(23, 25, 35, 0.08);
+  --shadow-aqua: 0 16px 40px rgba(45, 79, 249, 0.581);
+  --shadow-aqua2: 0 16px 40px rgba(93, 113, 210, 0.459);
+  --color-btn-dark: rgb(0, 0, 27);
+  --color-btn-light: rgb(100, 184, 236);
+  --color-btn-h-dark: rgb(101, 153, 233);
+  --color-btn-h-light: rgb(58, 97, 143);
+}
