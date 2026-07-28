@@ -5,7 +5,28 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "IranSansX";
+  src: url("../../fonts/IranSansX\ \(Medium\).woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: "IranSansX";
+  src: url("../../fonts/IranSansX\ \(DemiBold\).woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IranSansX";
+  src: url("../../fonts/IranSansX\ \(Light\).woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: "IranSansX";
   src: url("../../fonts/IranSansXFaNum (Bold).woff") format("woff");

@@ -1,5 +1,30 @@
-body {
-  font-family: var(--font-main);
-  font-weight: 400;
-  background-color: var(--color-bg);
+.top {
+  background-color: rgb(255, 102, 0);
+  grid-column: 1 / 3;
+}
+.text-right {
+  background-color: bisque;
+}
+.picture-left {
+  background-color: rgb(106, 9, 67);
+}
+.core-stack {
+  background-color: blue;
+  grid-column: 1/3;
+}
+.projects {
+  background-color: brown;
+  grid-column: 1/3;
+}
+.bottem {
+  background-color: cadetblue;
+  grid-column: 1/3;
+}
+.footer {
+  background-color: coral;
+  grid-column: 1/3;
+}
+.grid-cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

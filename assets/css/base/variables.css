@@ -1,11 +1,13 @@
 :root {
   --color-bg: #f7f7fb;
   --color-surface: #ffffff;
-  --color-border: rgb(97, 114, 124);
+  --color-background: #f9f9f9;
+  --color-secondary: #46474a;
+  --color-border: #c8c6c7;
   --color-org: rgb(51, 143, 219);
-  --color-text: #171923;
-  --color-muted: #626b7a;
-  --color-primary: #1f7a6d;
+  --color-text-org: #1a1c1c;
+  --color-text-2: #000000;
+  --color-text-3: #303031;
   --color-primary-dark: #155e54;
   --color-border: #e1e5ec;
   --font-main: "IranSansX", Tahoma, Arial, sans-serif;

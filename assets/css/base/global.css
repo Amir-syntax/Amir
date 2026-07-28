@@ -1,1 +1,43 @@
+body {
+  font-family: var(--font-main);
+  font-weight: 400;
+  background-color: var(--color-background);
+  direction: ltr;
+}
+section {
+  padding: 10px 0;
+  margin: 0 auto;
+}
+.wrap {
+  width: 1140px;
+  margin: 0 auto;
+}
 
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-1 {
+  width: 19%;
+}
+.col-2 {
+  width: 39%;
+}
+.col-3 {
+  width: 59%;
+}
+.col-4 {
+  width: 79%;
+}
+
+.col-5 {
+  width: 99%;
+}
+.grid-cont {
+  display: grid;
+  direction: rtl;
+}
+.header {
+  grid-column: 1 / 3;
+}
