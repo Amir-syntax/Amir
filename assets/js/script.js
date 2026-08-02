@@ -22,21 +22,11 @@ const sendEmail = (event) => {
       "template_0038hma", // شناسه قالب EmailJS
       event.target, // خود فرم به عنوان target
     )
-    .then(
-      (response) => {
-        console.log(
-          "ایمیل با موفقیت ارسال شد!",
-          response.status,
-          response.text,
-        );
-        alert("پیام شما با موفقیت ارسال شد!");
-        form.reset(); // پاک کردن فرم بعد از ارسال موفق
-      },
-      (error) => {
-        console.error("خطا در ارسال ایمیل:", error);
-        alert("متاسفانه خطایی رخ داد. لطفاً دوباره تلاش کنید.");
-      },
-    )
+    .then((response) => {
+      console.log("ایمیل با موفقیت ارسال شد!", response.status, response.text);
+      alert("پیام شما با موفقیت ارسال شد!");
+      form.reset(); // پاک کردن فرم بعد از ارسال موفق
+    })
     .finally(() => {
       // این بخش همیشه اجرا میشه (چه موفق، چه ناموفق)
       // فعال کردن مجدد دکمه و برگردوندن متن اصلی

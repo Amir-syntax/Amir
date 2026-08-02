@@ -1,3 +1,40 @@
+// مقداردهی اولیه Notyf
+const notyf = new Notyf({
+  duration: 4000,
+  position: {
+    x: "center",
+    y: "top",
+  },
+  dismissible: true,
+  ripple: true,
+  types: [
+    {
+      type: "success",
+      background: "linear-gradient(135deg, #00b09b, #91ce27)",
+      icon: "",
+    },
+    {
+      type: "error",
+      background: "linear-gradient(135deg, #ff192c, #ffb44b)",
+      icon: "",
+    },
+    {
+      type: "warning",
+      background: "linear-gradient(135deg, #f7f01e, #ff823a)",
+      icon: "",
+    },
+  ],
+});
+
+// تابع نمایش نوتیفیکیشن
+function showNotification(message, type = "success") {
+  notyf.open({
+    type: type,
+    message: message,
+    duration: 4000,
+  });
+}
+
 // مقداردهی اولیه با کلید عمومی
 emailjs.init("fstUDp-N7fhxo4SNR");
 
@@ -13,7 +50,7 @@ const sendEmail = (event) => {
   const recaptchaResponse = grecaptcha.getResponse();
 
   if (!recaptchaResponse) {
-    alert("❌ لطفاً ابتدا تیک 'من ربات نیستم' را بزنید!");
+    showNotification("لطفاً ابتدا تیک 'من ربات نیستم' را بزنید!", "warning");
     return;
   }
 
@@ -31,7 +68,7 @@ const sendEmail = (event) => {
           response.status,
           response.text,
         );
-        alert("✅ پیام شما با موفقیت ارسال شد!");
+        showNotification("پیام شما با موفقیت ارسال شد!", "success");
         form.reset();
         grecaptcha.reset();
       },
@@ -39,35 +76,34 @@ const sendEmail = (event) => {
         console.error("خطا در ارسال ایمیل:", error);
 
         // مدیریت انواع خطاها
-        let errorMessage = "❌ متاسفانه خطایی رخ داد. لطفاً دوباره تلاش کنید.";
+        let errorMessage = "متاسفانه خطایی رخ داد. لطفاً دوباره تلاش کنید.";
 
         if (error.status === 403) {
           errorMessage =
-            "❌ اعتبارسنجی امنیتی ناموفق بود. لطفاً تیک 'من ربات نیستم' را بزنید و دوباره تلاش کنید.";
+            "اعتبارسنجی امنیتی ناموفق بود. لطفاً تیک 'من ربات نیستم' را بزنید و دوباره تلاش کنید.";
         } else if (error.text) {
-          // بررسی محتوای خطا
           if (
             error.text.includes("reCAPTCHA") ||
             error.text.includes("captcha") ||
             error.text.includes("recaptcha")
           ) {
-            errorMessage = "❌ لطفاً ابتدا تیک 'من ربات نیستم' را بزنید!";
+            errorMessage = "لطفاً ابتدا تیک 'من ربات نیستم' را بزنید!";
           } else if (
             error.text.includes("limit") ||
             error.text.includes("Rate")
           ) {
             errorMessage =
-              "❌ شما بیش از حد مجاز درخواست ارسال کرده‌اید. لطفاً چند دقیقه بعد تلاش کنید.";
+              "شما بیش از حد مجاز درخواست ارسال کرده‌اید. لطفاً چند دقیقه بعد تلاش کنید.";
           } else if (
             error.text.includes("service") ||
             error.text.includes("template")
           ) {
             errorMessage =
-              "❌ مشکل در تنظیمات سرویس ارسال ایمیل. لطفاً بعداً تلاش کنید.";
+              "مشکل در تنظیمات سرویس ارسال ایمیل. لطفاً بعداً تلاش کنید.";
           }
         }
 
-        alert(errorMessage);
+        showNotification(errorMessage, "error");
         grecaptcha.reset();
       },
     )
