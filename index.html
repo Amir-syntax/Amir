@@ -126,6 +126,45 @@
 
       <!-- Start bottem-->
       <div class="bottem">
+        <form action="" method="" class="fr" id="contact-form">
+          <div class="inp-div">
+            <input
+              type="text"
+              name="from_name"
+              id="username"
+              class="inp name"
+              placeholder=" "
+            />
+            <label for="username">نام </label>
+          </div>
+
+          <div class="inp-div">
+            <input
+              type="email"
+              name="from_email"
+              id="email"
+              class="inp email"
+              placeholder=" "
+            />
+            <label for="email">ایمیل </label>
+          </div>
+
+          <div class="inp-div">
+            <textarea
+              name="message"
+              id="message"
+              class="inp message"
+              placeholder=" "
+            ></textarea>
+            <label class="lpn" for="message">پیام شما </label>
+          </div>
+          <!-- reCAPTCHA -->
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LflhHEtAAAAAG5Vh-SSSx6zJvIobsGE0TVKvwLR"
+          ></div>
+          <button type="submit" class="btn-dark sub">ارسال پیام</button>
+        </form>
         <div class="tx-left">
           <h2>ارتباط با من</h2>
           <h3>خوشحال میشم نظرات خودتون رو به من بگید</h3>
@@ -133,53 +172,7 @@
           <span><i class="fa fa-envelope-o"></i></span>
           <p lang="en">amirabbas140690@gmail.com</p>
         </div>
-        <div class="form-div">
-          <script
-            src="https://www.google.com/recaptcha/api.js"
-            async
-            defer
-          ></script>
-
-          <form action="" method="" class="fr" id="contact-form">
-            <div class="inp-div">
-              <input
-                type="text"
-                name="from_name"
-                id="username"
-                class="inp name"
-                placeholder=" "
-              />
-              <label for="username">نام </label>
-            </div>
-
-            <div class="inp-div">
-              <input
-                type="email"
-                name="from_email"
-                id="email"
-                class="inp email"
-                placeholder=" "
-              />
-              <label for="email">ایمیل </label>
-            </div>
-
-            <div class="inp-div">
-              <textarea
-                name="message"
-                id="message"
-                class="inp message"
-                placeholder=" "
-              ></textarea>
-              <label class="lpn" for="message">پیام شما </label>
-            </div>
-            <!-- reCAPTCHA -->
-            <div
-              class="g-recaptcha"
-              data-sitekey="6LflhHEtAAAAAG5Vh-SSSx6zJvIobsGE0TVKvwLR"
-            ></div>
-            <button type="submit" class="btn-dark sub">ارسال پیام</button>
-          </form>
-        </div>
+        <div class="form-div"></div>
       </div>
       <!-- End bottem-->
 

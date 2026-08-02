@@ -224,7 +224,7 @@
 .fr {
   width: 500px;
   height: 90%;
-  margin-top: 25px;
+  margin-top: 2px;
   margin-right: 25px;
 }
 
@@ -240,7 +240,7 @@
   border: 2px solid rgb(146, 146, 146);
   border-radius: 8px;
   resize: none;
-  padding: 0 15px; /* اضافه کردن padding برای متن */
+  padding: 0 15px;
   font-size: 16px;
   background: transparent;
   transition: all 0.3s ease;
@@ -250,10 +250,9 @@
 
 .message {
   height: 90px;
-  padding-top: 20px; /* برای textarea کمی بیشتر */
+  padding-top: 20px;
 }
 
-/* استایل لبل - تغییر position و اضافه کردن transform */
 .fr label {
   position: absolute;
   right: 16px;
@@ -266,19 +265,16 @@
   padding: 0 5px;
 }
 
-/* حالت ویژه برای textarea */
 .fr .inp-div textarea ~ label {
   top: 45px;
   transform: translateY(0);
 }
 
-/* وقتی input فوکوس داره */
 .inp:focus {
-  border-color: var(--color-secondary); /* فقط رنگ border عوض میشه */
+  border-color: var(--color-secondary);
   outline: none;
 }
 
-/* وقتی input فوکوس داره یا کاربر تایپ کرده - لبل بالا میره */
 .inp:focus ~ label,
 .inp:not(:placeholder-shown) ~ label {
   top: 7px;
@@ -287,7 +283,6 @@
   color: var(--color-secondary);
 }
 
-/* حالت ویژه برای textarea وقتی فوکوس یا پر شده */
 textarea.inp:focus ~ label,
 textarea.inp:not(:placeholder-shown) ~ label {
   top: 7px;
@@ -304,11 +299,11 @@ textarea.inp:not(:placeholder-shown) ~ label {
 }
 
 .form-div {
-  margin-right: -20px;
+  margin-left: -550px;
 }
 .tx-left {
   position: relative;
-  margin-right: 220px;
+  margin-left: 250px;
   top: 60px;
   width: 300px;
 }
