@@ -369,3 +369,8 @@ textarea.inp:not(:placeholder-shown) ~ label {
 .inp {
   padding-right: 15px;
 }
+
+.g-recaptcha {
+  margin: 10px;
+  margin-right: 15px;
+}
