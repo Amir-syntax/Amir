@@ -310,7 +310,7 @@ textarea.inp:not(:placeholder-shown) ~ label {
 .tx-left h2 {
   color: var(--color-secondary);
   font-size: 1rem;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .tx-left h3 {
