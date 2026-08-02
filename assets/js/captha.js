@@ -33,12 +33,42 @@ const sendEmail = (event) => {
         );
         alert("✅ پیام شما با موفقیت ارسال شد!");
         form.reset();
-        grecaptcha.reset(); // ریست کردن کپچا بعد از ارسال موفق
+        grecaptcha.reset();
       },
       (error) => {
         console.error("خطا در ارسال ایمیل:", error);
-        alert("❌ متاسفانه خطایی رخ داد. لطفاً دوباره تلاش کنید.");
-        grecaptcha.reset(); // ریست کردن کپچا در صورت خطا
+
+        // مدیریت انواع خطاها
+        let errorMessage = "❌ متاسفانه خطایی رخ داد. لطفاً دوباره تلاش کنید.";
+
+        if (error.status === 403) {
+          errorMessage =
+            "❌ اعتبارسنجی امنیتی ناموفق بود. لطفاً تیک 'من ربات نیستم' را بزنید و دوباره تلاش کنید.";
+        } else if (error.text) {
+          // بررسی محتوای خطا
+          if (
+            error.text.includes("reCAPTCHA") ||
+            error.text.includes("captcha") ||
+            error.text.includes("recaptcha")
+          ) {
+            errorMessage = "❌ لطفاً ابتدا تیک 'من ربات نیستم' را بزنید!";
+          } else if (
+            error.text.includes("limit") ||
+            error.text.includes("Rate")
+          ) {
+            errorMessage =
+              "❌ شما بیش از حد مجاز درخواست ارسال کرده‌اید. لطفاً چند دقیقه بعد تلاش کنید.";
+          } else if (
+            error.text.includes("service") ||
+            error.text.includes("template")
+          ) {
+            errorMessage =
+              "❌ مشکل در تنظیمات سرویس ارسال ایمیل. لطفاً بعداً تلاش کنید.";
+          }
+        }
+
+        alert(errorMessage);
+        grecaptcha.reset();
       },
     )
     .finally(() => {
