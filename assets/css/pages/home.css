@@ -800,3 +800,8 @@ textarea.inp:not(:placeholder-shown) ~ label {
     font-size: 0.85rem;
   }
 }
+@media (max-width: 992px) {
+  .grid-cont {
+    grid-template-columns: 1fr !important;
+  }
+}
