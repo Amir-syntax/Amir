@@ -82,12 +82,12 @@
           <div class="item-s">
             <i class="fa fa-css3"></i>
             <h3>Css</h3>
-            <p>Css and Css3, Grid, Flexbox</p>
+            <p>Css and Css3, Grid</p>
           </div>
           <div class="item-s">
             <i class="fa fa-github"></i>
             <h3>Git and Github</h3>
-            <p>Git, GitHub, GitLab, Bitbucket</p>
+            <p>Git, GitHub, GitLab</p>
           </div>
           <div class="item-s">
             <i class="fa fa-code"></i>
@@ -102,34 +102,88 @@
       <div class="projects" id="projects">
         <div class="title-project">
           <h2>نمونه کار</h2>
-          <h3>پروژه های اخیر</h3>
+          <h3>تمام پروژه های من</h3>
           <span lang="en">2026 _ 2025</span>
         </div>
-        <div class="itme-pic-div">
-          <div class="item-pic">
-            <div class="img-pic">
-              <a href="assets/images/pic-1.jpg" data-lightbox="gallery">
-                <img src="assets/images/pic-1.jpg" alt="" />
-              </a>
-            </div>
-            <div class="tx">
-              <h4>آنلاین شاپ</h4>
-              <p>هدر زیبا / ریسپانسیو</p>
-              <a href="#"><i class="fa fa-eye"></i></a>
+
+        <div class="slider-wrapper">
+          <button class="slider-btn next-btn" id="nextBtn" aria-label="بعدی">
+            <i class="fa fa-chevron-right"></i>
+          </button>
+
+          <div class="slider-viewport">
+            <div class="itme-pic-div" id="sliderTrack">
+              <div class="item-pic" style="margin: 15px">
+                <div class="img-pic">
+                  <a href="assets/images/Web1.png" data-lightbox="gallery">
+                    <img
+                      src="assets/images/Web1.png"
+                      alt=""
+                      style="width: 100%"
+                    />
+                  </a>
+                </div>
+                <div class="tx">
+                  <h4>آنلاین شاپ</h4>
+                  <p>هدر زیبا / ریسپانسیو</p>
+                  <a
+                    href="https://amir-syntax.github.io/Online-shope/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fa fa-eye"></i>مشاهده</a
+                  >
+                </div>
+              </div>
+
+              <div class="item-pic" style="margin: 15px">
+                <div class="img-pic">
+                  <a href="assets/images/Web2.png" data-lightbox="gallery">
+                    <img
+                      src="assets/images/Web2.png"
+                      alt=""
+                      style="width: 100%"
+                    />
+                  </a>
+                </div>
+                <div class="tx">
+                  <h4>دیجیتال مارکتینگ</h4>
+                  <p>سایت شیک / اولین پروژه من</p>
+                  <a
+                    href="https://amir-syntax.github.io/My-first-project/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fa fa-eye"></i>مشاهده</a
+                  >
+                </div>
+              </div>
+
+              <div class="item-pic" style="margin: 15px">
+                <div class="img-pic">
+                  <a href="assets/images/Web3.png" data-lightbox="gallery">
+                    <img
+                      src="assets/images/Web3.png"
+                      alt=""
+                      style="width: 100%"
+                    />
+                  </a>
+                </div>
+                <div class="tx">
+                  <h4>باتاب پروتئین</h4>
+                  <p>رنگ بندی زیبا / سایت کوچک</p>
+                  <a
+                    href="https://amir-syntax.github.io/Batab_protein/ "
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fa fa-eye"></i>مشاهده</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
-          <div class="item-pic">
-            <div class="img-pic">
-              <a href="assets/images/pic-2.jpg" data-lightbox="gallery">
-                <img src="assets/images/pic-2.jpg" alt="" />
-              </a>
-            </div>
-            <div class="tx">
-              <h4>دیجیتال مارکتینگ</h4>
-              <p>هدر زیبا / ریسپانسیو</p>
-              <a href="#"><i class="fa fa-eye"></i></a>
-            </div>
-          </div>
+
+          <button class="slider-btn prev-btn" id="prevBtn" aria-label="قبلی">
+            <i class="fa fa-chevron-left"></i>
+          </button>
         </div>
       </div>
       <!-- End my project-->
@@ -217,5 +271,6 @@
     <script src="assets/js/script.js"></script>
     <script src="assets/js/min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/Slider.js"></script>
   </body>
 </html>

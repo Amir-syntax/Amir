@@ -134,11 +134,10 @@
   background-color: var(--color-surface);
 }
 .projects {
-  height: 625px;
+  height: 695px;
   width: 100%;
   background-color: var(--color-surface);
 }
-
 .title-project {
   position: relative;
   width: 90%;
@@ -168,23 +167,76 @@
   font-weight: 600;
   color: var(--color-secondary);
 }
-.itme-pic-div {
-  margin: 125px auto;
+
+/* --- اسلایدر --- */
+.slider-wrapper {
+  position: relative;
   width: 92.5%;
+  margin: 125px auto 0;
+  display: flex;
+  align-items: center;
+}
+.slider-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+.itme-pic-div {
   background-color: var(--color-surface);
   position: relative;
   display: flex;
-  justify-content: space-around;
+  transition: transform 0.45s ease;
 }
 .item-pic {
   position: relative;
+  flex: 0 0 calc(50% - 30px);
+  max-width: calc(50% - 30px);
 }
+
+.slider-btn {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-secondary);
+  background-color: var(--color-surface);
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    opacity 0.3s ease;
+  z-index: 2;
+}
+.slider-btn i {
+  font-size: 1.1rem;
+}
+.slider-btn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-surface);
+}
+.slider-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.slider-btn:disabled:hover {
+  background-color: var(--color-surface);
+  color: var(--color-secondary);
+}
+.next-btn {
+  margin-left: 15px;
+}
+.prev-btn {
+  margin-right: 15px;
+}
+
 .tx h4 {
   font-weight: 600;
   font-size: 1.3rem;
   margin: 5px;
 }
-
 .tx p {
   color: var(--color-secondary);
   margin-top: 5px;
@@ -224,7 +276,7 @@
 .fr {
   width: 500px;
   height: 90%;
-  margin-top: 2px;
+  margin-top: 15px;
   margin-right: 25px;
 }
 
@@ -422,7 +474,6 @@ textarea.inp:not(:placeholder-shown) ~ label {
   transform: scale(1);
 }
 
-/* تاخیر برای المان‌های داخلی */
 .reveal .delay-1 {
   transition-delay: 0.1s;
 }
@@ -437,4 +488,373 @@ textarea.inp:not(:placeholder-shown) ~ label {
 }
 .reveal .delay-5 {
   transition-delay: 0.5s;
+}
+.fa-eye {
+  position: relative;
+  left: 11px;
+  top: 4px;
+}
+
+@media (max-width: 700px) {
+  .item-pic {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+/* ===================== RESPONSIVE ===================== */
+
+/* ---------- 1200px ---------- */
+@media (max-width: 1200px) {
+  .wrap {
+    width: 92%;
+  }
+  .header span {
+    left: 5rem;
+  }
+  .Talk {
+    right: 5rem;
+  }
+}
+
+/* ---------- 992px : تبلت بزرگ ---------- */
+@media (max-width: 992px) {
+  /* هدر */
+  .header {
+    padding: 15px 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .header span {
+    position: static;
+    order: 1;
+  }
+  .Talk {
+    position: static;
+    order: 2;
+    font-size: 0.85rem;
+  }
+  .header ul {
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
+  .header ul li {
+    margin: 0 10px;
+  }
+
+  /* فاصله برای هدر فیکس */
+  .top {
+    padding-top: 120px;
+  }
+
+  /* بخش اول */
+  .top {
+    height: auto;
+    min-height: 30rem;
+    padding-bottom: 40px;
+  }
+  .top-wrap-1 h1 {
+    font-size: 3rem;
+  }
+
+  /* نگاه من + عکس */
+  .grid-cont {
+    grid-template-columns: 1fr;
+  }
+  .text-right,
+  .picture-left {
+    grid-column: 1 / -1;
+    height: auto;
+  }
+  .text-right {
+    padding: 3rem 0;
+  }
+  .text-right h2,
+  .text-right p,
+  .description {
+    margin-right: 6%;
+    margin-left: 6%;
+    width: auto;
+    max-width: 500px;
+  }
+  .text-right h2 {
+    margin-top: 3rem;
+  }
+  .picture-left {
+    height: auto;
+    padding: 2rem 0;
+  }
+  .picture-left img {
+    height: 26rem;
+    width: 90%;
+    object-fit: cover;
+  }
+
+  /* مهارت‌ها */
+  .stack {
+    padding: 0 5%;
+  }
+  .stack div {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* پروژه‌ها */
+  .projects {
+    height: auto;
+    padding-bottom: 60px;
+  }
+  .title-project {
+    top: 8%;
+  }
+  .slider-wrapper {
+    margin-top: 90px;
+  }
+
+  /* فرم تماس */
+  .bottem {
+    flex-direction: column-reverse;
+    height: auto;
+    align-items: center;
+    padding: 40px 0;
+  }
+  .fr {
+    width: 90%;
+    max-width: 500px;
+    margin: 0;
+  }
+  .form-div {
+    margin: 0;
+  }
+  .tx-left {
+    margin: 0 0 30px 0;
+    top: 0;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  /* فوتر */
+  .footer {
+    flex-direction: column;
+    padding: 20px 0;
+    text-align: center;
+    gap: 10px;
+  }
+  .footer p {
+    position: static;
+    margin: 0;
+  }
+  .footer span {
+    position: static;
+  }
+  .footer ul {
+    margin: 0;
+  }
+}
+
+/* ---------- 768px : تبلت ---------- */
+@media (max-width: 768px) {
+  .header ul li {
+    margin: 0 8px;
+    font-size: 0.85rem;
+  }
+  .header span {
+    font-size: 1.5rem;
+  }
+
+  .top {
+    padding-top: 130px;
+  }
+  .top-wrap-1 h1 {
+    font-size: 2.4rem;
+  }
+  .top-wrap-1 p {
+    font-size: 0.95rem;
+    letter-spacing: 0.3em;
+  }
+
+  .text-right h2 {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+  }
+  .text-right p {
+    font-size: 1.3rem;
+  }
+  .description p {
+    font-size: 1rem;
+  }
+  .picture-left img {
+    height: 20rem;
+  }
+
+  .core-stack h2 {
+    margin: 30px 5%;
+  }
+  .stack {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    padding: 0 5%;
+    gap: 15px;
+  }
+  .stack div {
+    height: 9rem;
+  }
+  .item-s i {
+    top: 30px;
+    left: 25px;
+  }
+  .item-s h3 {
+    top: 65px;
+    left: 25px;
+    font-size: 0.95rem;
+  }
+  .item-s p {
+    top: 92px;
+    left: 25px;
+    font-size: 0.78rem;
+  }
+
+  .title-project h2 {
+    font-size: 1.05rem;
+  }
+  .title-project h3 {
+    font-size: 1.1rem;
+  }
+  .title-project span {
+    letter-spacing: 0.2em;
+    font-size: 0.7rem;
+  }
+  .slider-wrapper {
+    margin-top: 70px;
+    width: 94%;
+  }
+  .slider-btn {
+    width: 36px;
+    height: 36px;
+  }
+  .next-btn {
+    margin-left: 8px;
+  }
+  .prev-btn {
+    margin-right: 8px;
+  }
+  .tx h4 {
+    font-size: 1.1rem;
+  }
+  .tx p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ---------- 576px : موبایل بزرگ ---------- */
+@media (max-width: 576px) {
+  .header {
+    padding: 12px 15px;
+  }
+  .header ul {
+    flex-wrap: wrap;
+  }
+  .header ul li {
+    margin: 4px 6px;
+    font-size: 0.8rem;
+  }
+  .header span {
+    font-size: 1.3rem;
+  }
+  .Talk {
+    font-size: 0.75rem;
+    padding: 0.3rem 1rem;
+  }
+
+  .top {
+    padding-top: 150px;
+    min-height: 24rem;
+  }
+  .top-wrap-1 h1 {
+    font-size: 2rem;
+  }
+  .top-wrap-1 span {
+    font-size: 32px;
+  }
+
+  .text-right h2,
+  .text-right p,
+  .description {
+    margin-right: 6%;
+    margin-left: 6%;
+  }
+  .text-right p {
+    font-size: 1.15rem;
+  }
+  .picture-left img {
+    height: 16rem;
+  }
+
+  .stack {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .inp {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .sub {
+    width: 100%;
+    margin: 0;
+    padding: 12px 0;
+  }
+  .g-recaptcha {
+    margin: 10px 0;
+    transform: scale(0.9);
+    transform-origin: right;
+  }
+
+  .footer ul li {
+    margin: 0 8px;
+  }
+}
+
+/* ---------- 400px : موبایل کوچک ---------- */
+@media (max-width: 400px) {
+  .wrap {
+    width: 94%;
+  }
+  .header ul li {
+    font-size: 0.72rem;
+    margin: 3px 5px;
+  }
+  .top-wrap-1 h1 {
+    font-size: 1.7rem;
+  }
+  .top-wrap-1 p {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+  }
+
+  .stack {
+    grid-template-columns: 1fr;
+  }
+
+  .slider-btn {
+    width: 32px;
+    height: 32px;
+  }
+  .slider-btn i {
+    font-size: 0.9rem;
+  }
+  .tx h4 {
+    font-size: 1rem;
+  }
+  .tx a {
+    left: 8px;
+    bottom: 34px;
+  }
+  .tx a i {
+    font-size: 1.2rem;
+  }
+
+  .footer {
+    font-size: 0.85rem;
+  }
 }
