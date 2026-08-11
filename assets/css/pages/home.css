@@ -437,9 +437,6 @@ textarea.inp:not(:placeholder-shown) ~ label {
 
 /* ---------- 1200px ---------- */
 @media (max-width: 1200px) {
-  body {
-    width: 1170px;
-  }
   .wrap {
     width: 92%;
   }
@@ -453,9 +450,6 @@ textarea.inp:not(:placeholder-shown) ~ label {
 
 /* ---------- 992px : تبلت بزرگ ---------- */
 @media (max-width: 992px) {
-  body {
-    width: 975px;
-  }
   .header {
     padding: 15px 20px;
     justify-content: center;
@@ -593,9 +587,6 @@ textarea.inp:not(:placeholder-shown) ~ label {
 
 /* ---------- 768px : تبلت ---------- */
 @media (max-width: 768px) {
-  body {
-    width: 740px;
-  }
   .header ul li {
     margin: 0 8px;
     font-size: 0.85rem;
@@ -688,9 +679,6 @@ textarea.inp:not(:placeholder-shown) ~ label {
 }
 
 @media (max-width: 576px) {
-  body {
-    width: 550px;
-  }
   .header {
     padding: 12px 15px;
   }
