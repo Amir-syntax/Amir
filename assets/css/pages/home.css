@@ -494,10 +494,9 @@ textarea.inp:not(:placeholder-shown) ~ label {
     padding-top: 120px;
   }
 
-  /* بخش اول */
   .top {
     height: auto;
-    min-height: 81rem;
+    height: 81rem;
     padding-bottom: 40px;
   }
   .top-wrap-1 h1 {
@@ -714,14 +713,19 @@ textarea.inp:not(:placeholder-shown) ~ label {
     padding: 0.3rem 1rem;
   }
 
-  .top {
-    min-height: 40rem;
-  }
   .top-wrap-1 h1 {
     font-size: 2rem;
+    position: relative;
+    top: -160px;
+  }
+  .top-wrap-1 p {
+    position: relative;
+    top: -160px;
   }
   .top-wrap-1 span {
     font-size: 32px;
+    position: relative;
+    top: -170px;
   }
 
   .text-right h2,
@@ -788,6 +792,10 @@ textarea.inp:not(:placeholder-shown) ~ label {
   textarea.inp:not(:placeholder-shown) ~ label {
     top: 7px;
     transform: translateY(-20px) scale(0.9) translateX(13px);
+  }
+  .top {
+    padding-top: 470px;
+    height: 42rem;
   }
 }
 /* ---------- 400px : موبایل کوچک ---------- */
