@@ -340,7 +340,7 @@
 .inp:focus ~ label,
 .inp:not(:placeholder-shown) ~ label {
   top: 7px;
-  transform: translateY(-13px) scale(0.85);
+  transform: translateY(-14px) scale(0.85) translateX(6px);
   font-size: 0.9rem;
   color: var(--color-secondary);
 }
@@ -348,7 +348,7 @@
 textarea.inp:focus ~ label,
 textarea.inp:not(:placeholder-shown) ~ label {
   top: 7px;
-  transform: translateY(-16px) scale(0.85);
+  transform: translateY(-16px) scale(0.85) translateX(8px);
 }
 
 .sub {
