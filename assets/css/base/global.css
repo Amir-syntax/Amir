@@ -81,3 +81,60 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+/* ===================== Scroll Reveal (فید و اسلاید حرفه‌ای) ===================== */
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-scale {
+  opacity: 0;
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal {
+  transform: translateY(50px);
+}
+.reveal-left {
+  transform: translateX(-60px);
+}
+.reveal-right {
+  transform: translateX(60px);
+}
+.reveal-scale {
+  transform: scale(0.94);
+}
+
+.reveal.visible,
+.reveal-left.visible,
+.reveal-right.visible,
+.reveal-scale.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* آیتم‌های داخلی (کارت‌های مهارت و پروژه) با تاخیر پلکانی */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .reveal-item {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
