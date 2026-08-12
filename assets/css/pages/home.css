@@ -105,8 +105,17 @@
   background-color: #f2f2f2;
   margin: 0 30px;
   position: relative;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease-in-out;
 }
+
+.item-s {
+  transition:
+    transform 0.2s ease-out,
+    box-shadow 0.2s ease-out,
+    background-color 0.2s ease-out;
+  will-change: transform, box-shadow;
+}
+
 .item-s i {
   position: absolute;
   font-size: 1.5rem;
@@ -130,6 +139,8 @@
 }
 .item-s:hover {
   background-color: var(--color-surface);
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 .projects {
   height: auto;
