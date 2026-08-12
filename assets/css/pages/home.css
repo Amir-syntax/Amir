@@ -715,8 +715,7 @@ textarea.inp:not(:placeholder-shown) ~ label {
   }
 
   .top {
-    padding-top: 150px;
-    min-height: 52rem;
+    min-height: 40rem;
   }
   .top-wrap-1 h1 {
     font-size: 2rem;
