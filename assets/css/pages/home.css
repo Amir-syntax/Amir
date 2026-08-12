@@ -49,7 +49,6 @@
   background-color: var(--color-surface);
 }
 .text-right h2 {
-  margin-right: 10rem;
   margin-top: 10rem;
   font-weight: 700;
   color: var(--color-secondary);
@@ -59,7 +58,6 @@
   font-size: 1.6rem;
   font-weight: 600;
   margin-top: 1rem;
-  margin-right: 10rem;
   width: 29.5rem;
 }
 .description {
@@ -134,7 +132,9 @@
   background-color: var(--color-surface);
 }
 .projects {
-  height: 695px;
+  height: auto;
+  min-height: 695px;
+  padding-bottom: 60px;
   width: 100%;
   background-color: var(--color-surface);
 }
@@ -168,7 +168,6 @@
   color: var(--color-secondary);
 }
 
-/* --- اسلایدر --- */
 .slider-wrapper {
   position: relative;
   width: 92.5%;
@@ -232,6 +231,10 @@
   margin-right: 15px;
 }
 
+.tx {
+  position: relative;
+  padding-bottom: 46px;
+}
 .tx h4 {
   font-weight: 600;
   font-size: 1.3rem;
@@ -247,18 +250,25 @@
   position: absolute;
   display: inline-block;
   left: 12px;
-  bottom: 40px;
+  top: 5px;
 }
 .tx a i {
   font-size: 1.5rem;
   color: var(--color-secondary);
+  position: relative;
+  top: 3px;
+  left: 7.5px;
 }
 .img-pic {
   overflow: hidden;
   border-radius: 5px;
+  aspect-ratio: 1.5 / 1;
 }
 .img-pic img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
   border-radius: 5px;
   transition: transform 0.4s ease;
 }
@@ -433,6 +443,9 @@ textarea.inp:not(:placeholder-shown) ~ label {
     flex: 0 0 100%;
     max-width: 100%;
   }
+  .img-pic {
+    aspect-ratio: 1 / 1;
+  }
 }
 
 /* ---------- 1200px ---------- */
@@ -445,6 +458,9 @@ textarea.inp:not(:placeholder-shown) ~ label {
   }
   .Talk {
     right: 5rem;
+  }
+  .picture-left img {
+    object-position: 0 -400px;
   }
 }
 
@@ -474,7 +490,6 @@ textarea.inp:not(:placeholder-shown) ~ label {
     margin: 0 10px;
   }
 
-  /* فاصله برای هدر فیکس */
   .top {
     padding-top: 120px;
   }
@@ -482,7 +497,7 @@ textarea.inp:not(:placeholder-shown) ~ label {
   /* بخش اول */
   .top {
     height: auto;
-    min-height: 30rem;
+    min-height: 81rem;
     padding-bottom: 40px;
   }
   .top-wrap-1 h1 {
@@ -543,7 +558,6 @@ textarea.inp:not(:placeholder-shown) ~ label {
     margin-top: 90px;
   }
 
-  /* فرم تماس */
   .bottem {
     flex-direction: column-reverse;
     height: auto;
@@ -566,7 +580,6 @@ textarea.inp:not(:placeholder-shown) ~ label {
     text-align: center;
   }
 
-  /* فوتر */
   .footer {
     flex-direction: column;
     padding: 20px 0;
@@ -583,10 +596,13 @@ textarea.inp:not(:placeholder-shown) ~ label {
   .footer ul {
     margin: 0;
   }
+  .inp-div {
+    margin-bottom: 15px;
+  }
 }
 
 /* ---------- 768px : تبلت ---------- */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .header ul li {
     margin: 0 8px;
     font-size: 0.85rem;
@@ -597,6 +613,7 @@ textarea.inp:not(:placeholder-shown) ~ label {
 
   .top {
     padding-top: 130px;
+    height: 63rem;
   }
   .top-wrap-1 h1 {
     font-size: 2.4rem;
@@ -607,7 +624,7 @@ textarea.inp:not(:placeholder-shown) ~ label {
   }
 
   .text-right h2 {
-    margin-top: 2rem;
+    margin-top: -2rem;
     font-size: 1.1rem;
   }
   .text-right p {
@@ -677,7 +694,7 @@ textarea.inp:not(:placeholder-shown) ~ label {
     font-size: 0.95rem;
   }
 }
-
+/* ---------- 576px : موبایل  ---------- */
 @media (max-width: 576px) {
   .header {
     padding: 12px 15px;
@@ -699,7 +716,7 @@ textarea.inp:not(:placeholder-shown) ~ label {
 
   .top {
     padding-top: 150px;
-    min-height: 24rem;
+    min-height: 52rem;
   }
   .top-wrap-1 h1 {
     font-size: 2rem;
@@ -719,10 +736,12 @@ textarea.inp:not(:placeholder-shown) ~ label {
   }
   .picture-left img {
     height: 16rem;
+    object-position: 0 -190px;
   }
 
   .stack {
     grid-template-columns: 1fr 1fr;
+    height: 25rem;
   }
 
   .inp {
@@ -743,8 +762,35 @@ textarea.inp:not(:placeholder-shown) ~ label {
   .footer ul li {
     margin: 0 8px;
   }
-}
+  .tx a {
+    left: 27px;
+    top: 0;
+  }
+  .tx a i {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 1.7px;
+    left: 59px;
+  }
+  .img-pic {
+    position: relative;
+    left: 13px;
+  }
 
+  .inp:focus ~ label,
+  .inp:not(:placeholder-shown) ~ label {
+    top: 7px;
+    transform: translateY(-20px) scale(0.9) translateX(10px);
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+  }
+
+  textarea.inp:focus ~ label,
+  textarea.inp:not(:placeholder-shown) ~ label {
+    top: 7px;
+    transform: translateY(-20px) scale(0.9) translateX(13px);
+  }
+}
 /* ---------- 400px : موبایل کوچک ---------- */
 @media (max-width: 400px) {
   .wrap {
@@ -762,10 +808,6 @@ textarea.inp:not(:placeholder-shown) ~ label {
     letter-spacing: 0.15em;
   }
 
-  .stack {
-    grid-template-columns: 1fr;
-  }
-
   .slider-btn {
     width: 32px;
     height: 32px;
@@ -777,8 +819,8 @@ textarea.inp:not(:placeholder-shown) ~ label {
     font-size: 1rem;
   }
   .tx a {
-    left: 8px;
-    bottom: 34px;
+    left: 21px;
+    top: 0;
   }
   .tx a i {
     font-size: 1.2rem;
@@ -791,5 +833,11 @@ textarea.inp:not(:placeholder-shown) ~ label {
 @media (max-width: 992px) {
   .grid-cont {
     grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 346px) {
+  .stack {
+    grid-template-columns: 1fr;
   }
 }
