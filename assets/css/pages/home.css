@@ -13,7 +13,9 @@
     transform: translateY(0);
   }
 }
-
+.main_p {
+  display: contents;
+}
 .top {
   display: flex;
   position: relative;

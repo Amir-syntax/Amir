@@ -147,14 +147,14 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(contactForm);
 
   // Submit
-  contactForm.addEventListener("submit", sendEmail);
+  contactForm.addEventListener("submit", sendEmail5);
 });
 
 // ========================================
 // Send Email
 // ========================================
 
-async function sendEmail(event) {
+async function sendEmail5(event) {
   event.preventDefault();
 
   const form = event.target;
