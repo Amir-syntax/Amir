@@ -727,7 +727,7 @@ textarea.inp:not(:placeholder-shown) ~ label {
   .top-wrap-1 h1 {
     font-size: 2rem;
     position: relative;
-    top: -160px;
+    top: -185px;
   }
   .top-wrap-1 p {
     position: relative;
