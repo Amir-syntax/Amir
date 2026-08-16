@@ -9,7 +9,6 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <link
       rel="stylesheet"
@@ -216,10 +215,7 @@
             <label class="lpn" for="message">پیام شما </label>
           </div>
           <!-- reCAPTCHA -->
-          <div
-            class="g-recaptcha"
-            data-sitekey="6LflhHEtAAAAAG5Vh-SSSx6zJvIobsGE0TVKvwLR"
-          ></div>
+          <div id="recaptcha" class="g-recaptcha"></div>
           <button type="submit" class="btn-dark sub">ارسال پیام</button>
         </form>
         <div class="tx-left">
